@@ -25,9 +25,10 @@ class LoginController extends Controller
 
             if(auth()->user()->level == 'admin') {
                 return redirect()->intended('/admin'); 
+            } else {
+                return redirect()->intended('/');
             }
 
-            return redirect()->intended('/');
         }
 
         return back()->with('gagal', 'Login Gagal');

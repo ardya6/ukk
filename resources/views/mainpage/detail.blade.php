@@ -1,6 +1,7 @@
 @extends('mainpage.layouts.main')
 @section('container')
         <!-- About Start -->
+    <div class="card">
         <div class="container-xxl py-5">
              <div class="container">
                 {{-- @if (session('success'))
@@ -14,7 +15,7 @@
                 </div>
                 @endif  --}}
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-lg-6 col-md-5 wow fadeIn" data-wow-delay="0.1s">
                         <div class="about-img position-relative overflow-hidden p-5 pe-0">
                             <img class="img-fluid w-100" src="{{ asset('storage/' . $detail_ruangan->foto) }}" alt="">
                         </div>
@@ -42,5 +43,6 @@
                 </div> 
             </div>
         </div>
+    </div>    
         <!-- About End -->
 @endsection

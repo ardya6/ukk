@@ -65,6 +65,8 @@
 
     <!-- Template Javascript -->
     <script src={{ asset("assetss/js/main.js") }}></script>
+
+    @yield('script')
 </body>
 
 </html>

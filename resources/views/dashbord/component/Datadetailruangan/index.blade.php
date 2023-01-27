@@ -26,7 +26,7 @@
                             <th>fasilitas</th>
                             <th>luas</th>
                             <th>jenisruangan</th>
-                            <th>deskripsi</th>
+                            {{-- <th>deskripsi</th> --}}
                             <th>aksi</th>
                         </tr>
                     </thead>
@@ -42,7 +42,7 @@
                             <td>{{ $dp->fasilitas }}</td>
                             <td>{{ $dp->luas }}</td>
                             <td>{{ $dp->kategori->nama }}</td>
-                            <td>{{ $dp->deskripsi }}</td>
+                            {{-- <td>{{ $dp->deskripsi }}</td> --}}
                             <td>
                                 <div class="d-flex justify-content-center">
                                     <form action="/data-detail_ruangan4er/{{ $dp->id }}" method="POST">

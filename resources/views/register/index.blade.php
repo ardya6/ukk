@@ -42,9 +42,20 @@
 						<div class="form-group mb-3">
 							<input type="text" 
 							class="form-control form-control-user @error('name') is-invalid @enderror"
-							 id="Username" placeholder="Username" name="name" required
+							 id="Username" placeholder="Nama" name="name" required
 							 value="{{ old('name') }}">
 							 @error('name')
+							 <div class="invalid-feedback">
+								{{ $message }}
+							 </div>
+							 @enderror
+						</div>
+						<div class="form-group mb-3">
+							<input type="text" 
+							class="form-control form-control-user @error('notelp') is-invalid @enderror"
+							 id="notelp" placeholder="no.telp" name="notelp" required
+							 value="{{ old('notelp') }}">
+							 @error('notelp')
 							 <div class="invalid-feedback">
 								{{ $message }}
 							 </div>

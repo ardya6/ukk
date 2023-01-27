@@ -2,7 +2,7 @@
     <div class="navbar-wrapper  ">
         <div class="navbar-content scroll-div " >
             
-            <div class="">
+            {{-- <div class="">
                 <div class="main-menu-header">
                     <img class="img-radius" src="/assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
                     <div class="user-details">
@@ -17,7 +17,7 @@
                         <li class="list-group-item"><a href="auth-normal-sign-in.html"><i class="feather icon-log-out m-r-5"></i>Logout</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
             
             <ul class="nav pcoded-inner-navbar ">
                 <li class="nav-item pcoded-menu-caption">
@@ -38,12 +38,25 @@
                         <li><a href="/data-fasilitas">fasilitas</a></li>
                     </ul>
                 </li>
+
+                <li class="nav-item pcoded-hasmenu">
+                    <a href="#" class="nav-link   "><span class="pcoded-micon">
+                    <i class="feather icon-layout"></i>
+                    </span>
+                    <span class="pcoded-mtext">pesanan</span></a>
+                    <ul class="pcoded-submenu">
+                        <li><a class="nav-link {{ Request::is('/pesanan/belum_dibayar') ? 'active' : ''}}" href="/pesanan/belum_dibayar">belum dibayar</a></li>
+                        <li><a class="nav-link {{ Request::is('/pesanan/pembayaran_berhasil') ? 'active' : ''}}" href="/pesanan/pembayaran_berhasil">pembayaran berhasil</a></li>
+                        <li><a class="nav-link {{ Request::is('/pesanan/pembayaran_gagal') ? 'active' : ''}}" href="/pesanan/pembayaran_gagal">pembayaran gagal</a></li>
+
+                    </ul>
+                </li>
  
                 <li class="nav-item pcoded-menu-caption">
                     <label>user</label>
                 </li>
                 
-                <li class="nav-item"><a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">mainpage</span></a></li>
+                <li class="nav-item"><a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">home</span></a></li>
 
             </ul>
             

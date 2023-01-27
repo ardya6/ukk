@@ -22,15 +22,15 @@
                             </div>
                             <div class="form-group">
                                 <label>harga</label>
-                                <input type="text" class="form-control" placeholder="harga sewa" name="harga" >
+                                <input type="text" class="form-control" placeholder="harga" name="harga" >
                             </div>
                             <div class="form-group">
                                 <label>nama</label>
-                                <input type="text" class="form-control" placeholder="harga sewa" name="nama" >
+                                <input type="text" class="form-control" placeholder="nama" name="nama" >
                             </div>
                             <div class="form-group">
                                 <label>alamat</label>
-                                <input type="text" class="form-control" placeholder="harga sewa" name="alamat" >
+                                <input type="text" class="form-control" placeholder="alamat" name="alamat" >
                             </div>
                             <div class="form-group">
                                 <label>kapasitas</label>
