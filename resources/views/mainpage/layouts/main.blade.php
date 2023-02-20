@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href={{ asset("assetss/css/style.css") }} rel="stylesheet">
+    @yield('style')
 </head>
 
 <body>

@@ -20,6 +20,10 @@ use App\Http\Controllers\Detail_ruanganController;
 use App\Http\Controllers\PaymentCallbackController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\DatadetailruanganController;
+use App\Http\Controllers\DetailRatingController;
+use App\Http\Controllers\RatingController;
+use App\Http\Controllers\KomentarController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,3 +91,11 @@ Route::get('/profile-user',[ProfileController::class,'index'])->middleware('auth
 Route::post('/profile-user',[ProfileController::class,'update'])->middleware('auth');
 
 Route::get('/pesanan-user',[PesananController::class,'index'])->middleware('auth');
+
+Route::post('/rating-star',[DetailRatingController::class,'index'])->middleware('auth');
+Route::get('/rating-detail',[RatingController::class,'index'])->middleware(['auth','level:admin']);
+Route::post('/komentar',[KomentarController::class,'simpanKomentar'])->middleware('auth');
+Route::get('/komentar-admin',[KomentarController::class,'komentarAdmin'])->middleware(['auth','level:admin']);
+
+Route::get('/laporan',[LaporanController::class,'index']);
+Route::post('/laporan',[LaporanController::class,'cetak']);

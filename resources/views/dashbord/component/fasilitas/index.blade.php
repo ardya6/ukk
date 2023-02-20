@@ -8,8 +8,8 @@
     <div class="card">
         <div class="card-header">
             <a href="/data-fasilitas/create" class="btn btn-outline-primary mb-3">tambah data</a>
-            <h5>Basic Table</h5>
-            <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+            {{-- <h5>Basic Table</h5>
+            <span class="d-block m-t-5">use class <code>table</code> inside table element</span> --}}
         </div>
         <div class="card-body table-border-style">
             <div class="table-responsive">

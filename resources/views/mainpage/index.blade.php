@@ -61,11 +61,24 @@
                                     <div class="property-item rounded overflow-hidden">
                                         <div class="position-relative overflow-hidden">
                                             <a href=""><img class="img-fluid" src="{{ asset('storage/'.$dtlr->foto) }}" alt=""></a>
-                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3"></div>
+                                            <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
+                                                {{-- @if (isset($check))
+                                                <a href="#" class="btn mt-4" style="color: #dda5a5; border: 1px solid #dda5a5" data-toggle"modal" data-target="#ratingModal">
+                                                    Beri rating
+                                                </a>
+                                                    @include('mainpage.partials.modals.rating')
+                                                @endif --}}
+                                            </div>
                                             <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">{{ $dtlr->kategori->nama }}</div>
                                         </div>
                                         <div class="p-4 pb-0">
                                             <h5 class="text-primary mb-3">RP. {{number_format ($dtlr->harga) }}/hari</h5>
+                                            
+                                            {{-- <a href="#" class="btn mt-4" style="color: #dda5a5; border: 1px solid #dda5a5" data-bs-toggle"modal" data-bs-target="#ratingModal">
+                                                Beri rating
+                                            </a>
+                                                @include('mainpage.partials.modals.rating') --}}
+                                            
                                             <a class="d-block h5 mb-2" href="/detail/{{ $dtlr->id }}">{{ $dtlr->nama }}</a>
                                             <p><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $dtlr->alamat }}</p>
                                         </div>
@@ -90,50 +103,59 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <span>testimonial</span>
                     <h1 class="mb-3">Our Clients Say!</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="assetss/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Client Name</h6>
-                                    <small>Profession</small>
+                    @foreach($Komentar as $komen)
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="testimonial_author">
+                                <div class="testimonial_author_pic">
+                                    <div class="bg-white border rounded p-4">
+                                        <div class="d-flex align-items-center">
+                                            <img class="img-fluid flex-shrink-0 rounded" src="{{ $komen->user->fotoprofil ? asset('storage/'.$komen->user->fotoprofil) : "assetss/img/testimonial-1.jpg" }}" style="width: 45px; height: 45px;">
+                                            <div class="ps-3 testimonial_author_text">
+                                            <h5>{{ $komen->user->name }}</h5>
+                                            {{ $komen->komentar }}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="assetss/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Client Name</h6>
-                                    <small>Profession</small>
+                        {{-- <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="assetss/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-3">
-                        <div class="bg-white border rounded p-4">
-                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded" src="assetss/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
-                                <div class="ps-3">
-                                    <h6 class="fw-bold mb-1">Client Name</h6>
-                                    <small>Profession</small>
+                        <div class="testimonial-item bg-light rounded p-3">
+                            <div class="bg-white border rounded p-4">
+                                <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid flex-shrink-0 rounded" src="assetss/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                                    <div class="ps-3">
+                                        <h6 class="fw-bold mb-1">Client Name</h6>
+                                        <small>Profession</small>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> --}}
+                    @endforeach
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn mt-5 fs-4 align-items-center" style="color: #813c3c" data-bs-toggle="modal" data-bs-target="#komentarModal">
+                    <i class="fa fa-comment" aria-hidden="true"></i> Komentar </button>
                 </div>
             </div>
         </div>
         <!-- Testimonial End -->
         
-
+        @include('mainpage.partials.modals.komentar')
       @endsection

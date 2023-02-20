@@ -9,7 +9,7 @@
         <div class="card-header">
             <a href="/data-kategori/create" class="btn btn-outline-primary mb-3">tambah data</a>
             
-            <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+            {{-- <span class="d-block m-t-5">use class <code>table</code> inside table element</span> --}}
         </div>
         <div class="card-body table-border-style">
             <div class="table-responsive">

@@ -21,7 +21,7 @@
             
             <ul class="nav pcoded-inner-navbar ">
                 <li class="nav-item pcoded-menu-caption">
-                    <label>Navigation</label>
+                    <label>admin</label>
                 </li>
                 <li class="nav-item">
                     <a href="/admin" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
@@ -41,7 +41,7 @@
 
                 <li class="nav-item pcoded-hasmenu">
                     <a href="#" class="nav-link   "><span class="pcoded-micon">
-                    <i class="feather icon-layout"></i>
+                    <i class="feather icon-box"></i>
                     </span>
                     <span class="pcoded-mtext">pesanan</span></a>
                     <ul class="pcoded-submenu">
@@ -50,6 +50,18 @@
                         <li><a class="nav-link {{ Request::is('/pesanan/pembayaran_gagal') ? 'active' : ''}}" href="/pesanan/pembayaran_gagal">pembayaran gagal</a></li>
 
                     </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/rating-detail" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">rating admin</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/komentar-admin" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">komentar</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/laporan" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">laporan</span></a>
                 </li>
  
                 <li class="nav-item pcoded-menu-caption">
