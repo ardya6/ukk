@@ -25,7 +25,7 @@
                             <th>kapasitas</th>
                             <th>fasilitas</th>
                             <th>luas</th>
-                            <th>jenisruangan</th>
+                            <th>kategori ruangan</th>
                             {{-- <th>deskripsi</th> --}}
                             <th>aksi</th>
                         </tr>

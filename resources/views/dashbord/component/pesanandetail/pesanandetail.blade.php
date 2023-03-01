@@ -12,7 +12,7 @@
     </div> --}}
     <div class="card-body">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="card">
                     <div class="card-title">
                         <h3 class="text-center">kontak penyewa</h3>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-details">
@@ -33,9 +33,9 @@
                                     <tr>
                                       
                                        <th class="nama-gedung">gedung</th>
-                                       <th class="harga">harga</th>
+                                       <th class="harga">total harga</th>
                                        <th class="nama-acara">nama acara</th>
-                                       <th class="durasi-sewa">durasi sewa</th>
+                                       <th class="durasi-sewa">tanggal booking</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-center">
@@ -43,11 +43,15 @@
                                         <td>{{ $checkout->detailruangan->nama }}</td>
                                         <td>{{ $checkout->total_harga }}</td>
                                         <td>{{ $checkout->nama_acara }}</td>
-                                        <td>{{ $checkout->durasi_sewa }}</td>
+                                        <td>{{ $checkout->tanggal_booking }} sampai {{ $checkout->selesai_booking }}</td>
                                     </tr>
                                 </tbody>
                             </table>
+                            
+                        
+                           
                         </div>
+                        <h5><span class="badge bg-warning text-light">{{ $checkout->status_pembayaran }}</span></h5> 
                     </div>
                 </div>
             </div>

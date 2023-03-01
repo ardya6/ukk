@@ -72,7 +72,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/detail/{id}',[Detail_ruanganController::class,'index']);
 Route::get('/checkout/{id}',[CheckoutController::class,'index'])->middleware('auth');
 Route::post('/checkout/{id}',[CheckoutController::class,'sewa'])->middleware('auth');
-
+Route::get('/list-ruangan', [PropertylistController::class, 'list'])->middleware(['auth']);
 
 Route::get('/checkout/{id}/detail', [CheckoutController::class, 'detail'])->middleware('auth');
 

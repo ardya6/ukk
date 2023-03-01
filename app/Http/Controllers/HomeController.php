@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $kategoris = Kategori::get();
-        $detail_ruangans = Detail_ruangan::get();
+        $detail_ruangans = Detail_ruangan::paginate(6);
         $Komentar = komentar::get();
         @$komentarUser = komentar::where('user_id', auth()->user()->id)->first();
         return view('mainpage.index',[

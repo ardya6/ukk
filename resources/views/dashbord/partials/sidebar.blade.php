@@ -53,7 +53,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/rating-detail" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">rating admin</span></a>
+                    <a href="/rating-detail" class="nav-link "><span class="pcoded-micon"><i class="feather icon-star"></i></span><span class="pcoded-mtext">rating user</span></a>
                 </li>
 
                 <li class="nav-item">

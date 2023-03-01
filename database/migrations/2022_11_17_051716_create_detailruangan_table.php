@@ -22,7 +22,7 @@ class CreateDetailruanganTable extends Migration
             $table->string('kapasitas');
             $table->string('fasilitas');
             $table->string('luas');
-            $table->foreignId('kategori_id')->constrained('kategoris')->onDelete('restrict');
+            $table->foreignId('kategori_id')->constrained('kategoris')->onDelete('cascade');
             $table->string('deskripsi');
             $table->timestamps();
         });

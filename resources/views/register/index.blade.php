@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>sign up</title>
+	<title>daftar</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -18,7 +18,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="Phoenixcoded" />
 	<!-- Favicon icon -->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	{{-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> --}}
 
 	<!-- vendor css -->
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -31,12 +31,12 @@
 <!-- [ auth-signup ] start -->
 <div class="auth-wrapper">
 	<div class="auth-content text-center">
-		<img src="assets/images/logo.png" alt="" class="img-fluid mb-4">
+		{{-- <img src="assets/images/logo.png" alt="" class="img-fluid mb-4"> --}}
 		<div class="card borderless">
 			<div class="row align-items-center text-center">
 				<div class="col-md-12">
 					<form action="/register" method="POST" class="card-body">
-						<h4 class="f-w-400">Sign up</h4>
+						<h4 class="f-w-400">Daftar</h4>
 						<hr>
 						@csrf
 						<div class="form-group mb-3">
@@ -64,7 +64,7 @@
 						<div class="form-group mb-3">
 							<input type="text" class="form-control form-control-user @error('email') is-invalid
 							@enderror"
-							id="Email" aria-describedby="emailHelp" placeholder="Email address"
+							id="Email" aria-describedby="emailHelp" placeholder="Alamat Email"
 							name="email" required value="{{ old('email') }}">
 							@error('email')
 							<div class="invalid-feedback">
@@ -75,16 +75,16 @@
 						<div class="form-group mb-4">
 							<input type="password" 
 							class="form-control form-control-user @error('password') is-invalid @enderror" 
-							id="Password" placeholder="Password" name="password" required>
+							id="Password" placeholder="sandi" name="password" required>
 							@error('password')
 							<div class="invalid-feedback">
 								{{ $message }}
 							</div>
 							@enderror
 						</div>
-						<button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+						<button type="submit" class="btn btn-primary btn-block mb-4">Daftar</button>
 						<hr>
-						<p class="mb-2">Already have an account? <a href=/login class="f-w-400">Login</a></p>
+						<p class="mb-2">Sudah Mempunyai akun? <a href=/login class="f-w-400">masuk</a></p>
 					</div>
 				</div>
 			</div>

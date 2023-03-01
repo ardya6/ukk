@@ -29,7 +29,7 @@ class CheckoutController extends Controller
 
         $ruangan = Detail_ruangan::find($id);
         $selesai_booking = Carbon::parse($data['tanggal_booking'])->addDays($data['durasi_sewa']);
-        $cek = Checkout::whereDate('tanggal_booking', '<=', $data['tanggal_booking'])->whereDate('selesai_booking', '>=', $data['tanggal_booking'])->first();
+        $cek = Checkout::whereDate('tanggal_booking', '<=', $data['tanggal_booking'])->whereDate('selesai_booking', '>=', $data['tanggal_booking'])->where('detailruangan_id', $id)->first();
         if ($cek) {
             return redirect()->back()->withErrors([
                 'unavailable' => 'Ruangan untuk tangggal ' . $data['tanggal_booking'] . ' sedang disewa'
@@ -59,7 +59,7 @@ class CheckoutController extends Controller
             }
         }
 
-        return redirect("/checkout/$checkout->id/detail");
+        return redirect('/checkout/'.$checkout->id.'/detail');
     }
 
     public function detail($id) {

@@ -3,7 +3,13 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Get In Touch</h5>
+                <div class=" p-2 me-2">
+                    <h1 class="m-0 text-primary text-center">CIPTA</h1>
+                </div>
+                <p>merupakan suatu website untuk menemukan dan menyewa ruang untuk acara, kantor, dan ruang meetting dengan hitungan hari. tersedia berbagai ruang kantor, ruang meetting, hallroom dan ruangan lainnya yang senantiasa bertambah</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">kontak kami</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>jl.manukan tengah no.11 Komp perum keuangan,Surabaya,Indonesia</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 895 421 426 720</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>rani13resita@gmail.com</p>
@@ -14,22 +20,27 @@
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div> --}}
             </div>
-            {{-- <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Quick Links</h5>
-                <a class="btn btn-link text-white-50" href="">About Us</a>
-                <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="">Home</a>
-                
-                
-            </div> --}}
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-white mb-4">Follow us for more update</h5>
+                <h5 class="text-white mb-4">Halaman Lain</h5>
+                <a class="btn btn-link text-white-50" href="/about">tentang kami</a>
+                <a class="btn btn-link text-white-50" href="/list-ruangan">ruangan</a>
+                <a class="btn btn-link text-white-50" href="/">beranda</a>
+                
+                
+            </div>
+            <div class="col-lg-3 col-md-6">
+                {{-- <h5 class="text-white mb-4">Follow us for more update</h5>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> --}}
+                    <h6 class="text-white mb-4"> Jam Operasional </h6>
+                    <p> Senin - Kamis (09.00 - 16.00 WIB) 
+                    Jum'at - Sabtu (09.00 - 1.00 WIB) </p>
                 </div>
+                
+               
             </div>
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                 &copy; <a class="border-bottom" href="/">Delta5</a>, All Right Reserved. 

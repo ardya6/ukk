@@ -18,6 +18,7 @@ class AdminController extends Controller
       $fasilitas = Fasilitas::count();
       $pesanan = Checkout::count();
       $users = User::get();
-    return view('dashbord.component.admin', compact('ruangan', 'kategori', 'fasilitas', 'pesanan','users'));
+      $pesanans = Checkout::get();
+    return view('dashbord.component.admin', compact('ruangan', 'kategori', 'fasilitas', 'pesanan','users', 'pesanans'));
    }
 }

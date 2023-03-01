@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse">
         
         <ul class="navbar-nav ml-auto">
-            <li>
+            {{-- <li>
                 <div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                         <i class="icon feather icon-bell"></i>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </li> --}}
             <li>
                 <div class="dropdown drp-user">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

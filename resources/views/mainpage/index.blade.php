@@ -3,17 +3,26 @@
 <div class="container-fluid header bg-white p-0">
     <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
         <div class="col-md-6 p-5 mt-lg-5">
-            <h1 class="display-5 animated fadeIn mb-4">Find A <span class="text-primary">Perfect Home</span> To Live With Your Family</h1>
+            <h1 class="display-5 animated fadeIn mb-4">temukan<span class="text-primary"> Ruangan</span> sesuai kebutuhan anda dengan mudah bersama <span class="text-primary">CIPTA</span></h1>
             <p class="animated fadeIn mb-4 pb-2"></p>
-            <a href="/register" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+            {{-- <a href="/register" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a> --}}
         </div>
         <div class="col-md-6 animated fadeIn">
             <div class="owl-carousel header-carousel">
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src= {{ asset("assetss/img/carousel-1.jpg") }} alt="">
+                    <img class="img-fluid" src= {{ asset("assetss/img/imgukk/mnn.png") }} alt="">
                 </div>
                 <div class="owl-carousel-item">
-                    <img class="img-fluid" src={{ asset("assetss/img/carousel-2.jpg") }} alt="">
+                    <img class="img-fluid" src={{ asset("assetss/img/imgukk/rr1.jpg") }} alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src={{ asset("assetss/img/imgukk/nm.png") }} alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src={{ asset("assetss/img/imgukk/nnn.png") }} alt="">
+                </div>
+                <div class="owl-carousel-item">
+                    <img class="img-fluid" src={{ asset("assetss/img/imgukk/tmm.png") }} alt="">
                 </div>
             </div>
         </div>
@@ -22,7 +31,11 @@
         <!-- Category Start -->
         <div class="container-xxl py-5">
             <div class="container">
-              
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    {{-- <span>testimonial</span> --}}
+                    <h3 class="mb-3">pilihan tipe ruangan yang tersedia</h3>
+                    <p class="mb-3">pencarian sewa ruang untuk berbagai kebutuhan anda</p>
+                </div>
                 <div class="row g-5">
                     <div class="col-lg-5 col-sm-6 wow d-flex w-100 fadeInUp justify-content-evenly" data-wow-delay="0.1s">
                         @foreach ($kategoris as $kategori)
@@ -52,15 +65,19 @@
         <!-- Property List Start -->
         <div class="container-xxl py-5">
             <div class="container">
-               
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    {{-- <span>testimonial</span> --}}
+                    <h3 class="mb-3">rekomendasi Ruangan</h3>
+                    <p class="mb-3">Cari,Booking dan mulai hari produktif anda dalam hitungan menit</p>
+                </div>
                 <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div id="tab-1" class="tab-pane fade show p-0 active" >
                         <div class="row g-4">
                             @foreach ($detail_ruangans as $dtlr)     
                                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="property-item rounded overflow-hidden">
+                                    <div class="property-item rounded overflow-hidden" style="height: 460px; object-fit: cover">
                                         <div class="position-relative overflow-hidden">
-                                            <a href=""><img class="img-fluid" src="{{ asset('storage/'.$dtlr->foto) }}" alt=""></a>
+                                            <a href=""><img class="img-fluid item-align-center" style="height: 200px; widht:200px object-fit: cover" src="{{ asset('storage/'.$dtlr->foto) }}" alt=""></a>
                                             <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
                                                 {{-- @if (isset($check))
                                                 <a href="#" class="btn mt-4" style="color: #dda5a5; border: 1px solid #dda5a5" data-toggle"modal" data-target="#ratingModal">
@@ -86,9 +103,10 @@
                                             <small>{{ $dtlr->fasilitas }}</small>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             @endforeach
-                    
+                                {{ $detail_ruangans->links() }}
                            {{-- <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                                 <a class="btn btn-primary py-3 px-5" href="/list">Browse More Property</a>
                             </div> --}}
@@ -103,8 +121,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <span>testimonial</span>
-                    <h1 class="mb-3">Our Clients Say!</h1>
+                    {{-- <span>testimonial</span> --}}
+                    <h1 class="mb-3">Apa kata mereka mengenai CIPTA!</h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                     @foreach($Komentar as $komen)
@@ -151,7 +169,7 @@
                 </div>
                 <div class="text-center">
                     <button type="button" class="btn mt-5 fs-4 align-items-center" style="color: #813c3c" data-bs-toggle="modal" data-bs-target="#komentarModal">
-                    <i class="fa fa-comment" aria-hidden="true"></i> Komentar </button>
+                    <i class="fa fa-comment" aria-hidden="true"></i> tambah komentar </button>
                 </div>
             </div>
         </div>

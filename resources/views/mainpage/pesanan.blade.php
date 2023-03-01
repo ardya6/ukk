@@ -18,7 +18,7 @@
                             <th>#</th>
                             <th>nama penyewa</th>
                             <th>gedung</th>
-                            <th>tanggal sewa</th>
+                            <th>tanggal booking</th>
                             <th>total harga</th>
                             <th>status</th>
                             <th>aksi</th>
@@ -30,7 +30,7 @@
                             <th scope="row">{{ $loop->iteration }}</td>
                             <td>{{ $checkout->user->name}}</td>
                             <td>{{ $checkout->detailruangan->nama }}</td>
-                            <td>{{ $checkout->tanggal_booking }}</td>
+                            <td>{{ $checkout->tanggal_booking }} sampai {{ $checkout->selesai_booking }}</td>
                             <td>Rp. {{ number_format ( $checkout->total_harga) }}</td>
                              {{-- @if ($checkout->payment_status == '1')  --}}
                             <td>

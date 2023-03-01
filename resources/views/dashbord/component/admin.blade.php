@@ -29,7 +29,7 @@
                 <div class="card flat-card widget-primary-card">
                     <div class="row-table">
                         <div class="col-sm-3 card-body">
-                            <i class="feather icon-star-on"></i>
+                            <i class="feather icon-home"></i>     
                         </div>
                         <div class="col-sm-9">
                             <h4>{{ $ruangan }}</h4>
@@ -46,7 +46,7 @@
                 <div class="card flat-card widget-purple-card">
                     <div class="row-table">
                         <div class="col-sm-3 card-body">
-                            <i class="fas fa-trophy"></i>
+                            <i class="feather icon-align-justify"></i>
                         </div>
                         <div class="col-sm-9">
                             <h4>{{ $kategori }}</h4>
@@ -61,7 +61,7 @@
                 <div class="card flat-card widget-primary-card">
                     <div class="row-table">
                         <div class="col-sm-3 card-body">
-                            <i class="feather icon-star-on"></i>
+                            <i class="feather icon-box"></i>
                         </div>
                         <div class="col-sm-9">
                             <h4>{{ $fasilitas }}</h4>
@@ -76,7 +76,7 @@
                 <div class="card flat-card widget-purple-card">
                     <div class="row-table">
                         <div class="col-sm-3 card-body">
-                            <i class="fas fa-trophy"></i>
+                            <i class="feather icon-file-text"></i>
                         </div>
                         <div class="col-sm-9">
                             <h4>{{ $pesanan }}</h4>
@@ -91,7 +91,7 @@
                 <div class="card flat-card widget-primary-card">
                     <div class="row-table">
                         <div class="col-sm-3 card-body">
-                            <i class="feather icon-star-on"></i>
+                            <i class="feather icon-user"></i>
                         </div>
                         <div class="col-sm-9">
                             <h4>{{ $users->count() }}</h4>
@@ -137,6 +137,52 @@
                                             <td>
                                                 <strong style="font-size: 1.25rem">{{ $user->name }}</strong>
                                                 <div>{{ $user->email }}</div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-15">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-2">
+                        <h4 class="m-0 font-weight-bold text-primary"> Pesanan </h4>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="feather icon-more-horizontal"></i>
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr role="row">
+                                        <th>Nama Penyewa</th>
+                                        <th>Gedung</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($pesanans as $i => $item)
+                                        <tr>
+                                            <td>
+                                                {{ $item->user->name }}
+                                            </td>
+                                            <td>
+                                                {{ $item->detailruangan->nama }}
+                                            </td>
+                                            <td>
+                                                <a href="/pesanan/detail/{{ $item->id }}" class="btn btn-primary btn-sm">Detail</a>
                                             </td>
                                         </tr>
                                     @endforeach

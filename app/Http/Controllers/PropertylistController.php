@@ -34,5 +34,16 @@ class PropertylistController extends Controller
         'kategori' => $kategori
       ]);
     }
+
+    public function list(){
+      $kategori = Kategori::get();
+      $detail_ruangan = Detail_ruangan::get();
+
+          return view('mainpage.list', [
+            'title' => 'List',
+            'kategori' => $kategori,
+            'detail_ruangan' => $detail_ruangan
+          ]);
+    }
 }
 

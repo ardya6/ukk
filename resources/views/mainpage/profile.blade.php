@@ -26,12 +26,12 @@
         <div class="col-md-8 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">profile settings</h4>
+                    <h4 class="text-right">Pengaturan Profil</h4>
                 </div>
                 <div class="row mt-3">
                         @csrf
                         <div class="mb-5">
-                            <label class="labels">name</label>
+                            <label class="labels">Nama</label>
                             <input type="text" class="form-control" name="name" required placeholder="edit nama"
                               value="{{ auth()->user()->name }}">
                         </div>
@@ -41,7 +41,7 @@
                               value="{{ auth()->user()->notelp }}">
                         </div>
                         <div class="mb-5">
-                            <label class="labels">email</label>
+                            <label class="labels">Email</label>
                             <input type="text" class="form-control" name="email" required placeholder="edit email"
                               value="{{ auth()->user()->email }}">
                               @error('email')
@@ -50,8 +50,8 @@
                               </div>
                               @enderror
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">save
-                            profile</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Simpan
+                            profil</button></div>
                 </div>
             </div>
         </div>

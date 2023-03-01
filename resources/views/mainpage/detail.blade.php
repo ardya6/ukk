@@ -113,10 +113,10 @@
                         
                         <p>{{ $detail_ruangan->deskripsi }}</p>
                         <ul>
-                            <li>fasilitas: <span>{{ $detail_ruangan->fasilitas }}</span></li>
-                            <li>kapasitas: <span>{{ $detail_ruangan->kapasitas }}</span></li>
-                            <li>luas: <span><p>{{ $detail_ruangan->luas }}</p></span></li>
-                            <li>kategori: <span> <p>{{ $detail_ruangan->kategori->nama }}</p></span></li>
+                           <p>fasilitas: <span>{{ $detail_ruangan->fasilitas }}</span><p>
+                            <p>kpasitas: <span>{{ $detail_ruangan->kapasitas }}</span><p>
+                            <p>luas: <span><p>{{ $detail_ruangan->luas }}</p></span><p>
+                            <p>kategori: <span> <p>{{ $detail_ruangan->kategori->nama }}</p></span><p>
                         </ul>
                         @error('error')
                         <div class="alert alert-danger">{{ $message }}</div>

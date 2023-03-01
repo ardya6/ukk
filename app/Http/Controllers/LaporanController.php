@@ -19,7 +19,7 @@ class LaporanController extends Controller
         ]);
 
         $bulans = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-        $checkouts = Checkout::whereMonth('created_at', $data['bulan'])->whereYear('created_at', $data['tahun'])->with(['user', 'detailruangan', 'fasilitases'])->get();
+        $checkouts = Checkout::whereMonth('created_at', $data['bulan'])->whereYear('created_at', $data['tahun'])->where('status_pembayaran', 'Pembayaran Berhasil')->with(['user', 'detailruangan', 'fasilitases'])->get();
 
         // dd($checkouts);
         
